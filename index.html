@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhập vào năm dương lịch: </label>
+<input type="text" id="solar_calendar">
+<button onclick="lunarCalendar()">Show Lunar Calendar</button>
+<h1 style="color: red" id="lunar_calendar"></h1>
+</body>
+</html>
+<script>
+    function lunarCalendar() {
+        let solarCalendar = +document.getElementById('solar_calendar').value;
+        let can = solarCalendar % 10;
+        let chi = solarCalendar % 12;
+        let showCan;
+        let showChi;
+        switch (can) {
+            case 0:
+                showCan = 'Canh'
+                break
+            case 1:
+                showCan = 'Tân';
+                break
+            case 2:
+                showCan = 'Nhâm';
+                break;
+            case 3:
+                showCan = 'Quý';
+                break;
+            case 4:
+                showCan = 'Giáp';
+                break;
+            case 5:
+                showCan = 'Ất';
+                break;
+            case 6:
+                showCan = 'Bính';
+                break;
+            case 7:
+                showCan = 'Đinh';
+                break
+            case 8:
+                showCan = 'Mậu';
+                break;
+            case 9:
+                showCan = 'Kỷ';
+                break;
+        }
+        switch (chi) {
+            case 0:
+                showChi = 'Thân';
+                break;
+            case 1:
+                showChi = 'Dậu'
+                break;
+            case 2:
+                showChi = 'Tuất'
+                break;
+            case 3:
+                showChi = 'Hợi';
+                break;
+            case 4:
+                showChi = 'Tý';
+                break;
+            case 5:
+                showChi = 'Sửu';
+                break;
+            case 6:
+                showChi = 'Dần';
+                break;
+            case 7:
+                showChi = 'Mão';
+                break;
+            case 8:
+                showChi = 'Thìn';
+                break;
+            case 9:
+                showChi = 'Tị';
+                break;
+            case 10:
+                showChi = 'Ngọ';
+                break;
+            case 11:
+                showChi = 'Mùi'
+                break;
+
+        }
+       document.getElementById('lunar_calendar').innerHTML = showCan +  ' '+showChi;
+    }
+</script>
